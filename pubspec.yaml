@@ -1,17 +1,23 @@
-workflows:
-  android-release:
-    name: CyberPulse Android Release
-    environment:
-      flutter: stable
-    triggering:
-      events:
-        - push
-    scripts:
-      - name: Get Flutter dependencies
-        script: |
-          flutter pub get
-      - name: Build APK Release
-        script: |
-          flutter build apk --release
-    artifacts:
-      - build/app/outputs/apk/release/app-release.apk
+
+name: cyberpulse_android
+description: "CyberPulse - All-in-One Single File Flutter Android Application dengan tema Cyberpunk Neon"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  google_fonts: ^6.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
