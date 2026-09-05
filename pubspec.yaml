@@ -3,7 +3,6 @@ workflows:
     name: CyberPulse Android Release
     environment:
       flutter: stable
-      xcode: latest
     triggering:
       events:
         - push
